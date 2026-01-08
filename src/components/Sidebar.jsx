@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useWorkspace } from '../contexts/WorkspaceContext';
-import { LayoutDashboard, CheckSquare, StickyNote, LogOut, Settings, ChevronDown, User, Users, Clock, CheckCircle2, Calendar, BookOpen, Briefcase, Bell } from 'lucide-react';
+import { LayoutDashboard, CheckSquare, StickyNote, LogOut, Settings, ChevronDown, User, Users, Clock, CheckCircle2, Calendar, BookOpen, Briefcase, Bell, Sparkles } from 'lucide-react';
 
 const Sidebar = () => {
     const { logout } = useAuth();
@@ -41,6 +41,15 @@ const Sidebar = () => {
 
     return (
         <div className="h-screen w-64 glass-sidebar flex flex-col transition-all duration-300">
+            {/* App Branding */}
+            <div className="p-6 flex items-center gap-3">
+                <div className="p-2 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl shadow-lg shadow-indigo-500/20">
+                    <Sparkles size={24} className="text-white" />
+                </div>
+                <h1 className="text-xl font-bold bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
+                    Namma App
+                </h1>
+            </div>
             <div className="p-4 border-b border-white/5">
                 <div className="relative">
                     <button

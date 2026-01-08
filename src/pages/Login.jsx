@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
+import { Sparkles } from 'lucide-react';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -27,7 +28,15 @@ export default function Login() {
 
     return (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className="sm:mx-auto sm:w-full sm:max-w-sm text-center">
+                <div className="inline-flex items-center gap-3 mb-6">
+                    <div className="p-2 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl shadow-lg shadow-indigo-500/20">
+                        <Sparkles size={32} className="text-white" />
+                    </div>
+                    <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
+                        Namma App
+                    </h1>
+                </div>
                 <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
                     Sign in to your account
                 </h2>
